@@ -9,12 +9,12 @@ services:
             - 80:80
         volumes:
             - ./:/var/www/html
-        container_name: nginx
+        container_name: slnginx
         depends_on:
             - php
             - mysql
         networks:
-            - app-network
+            - sl-app-network
 
     php:
         build:
@@ -22,16 +22,16 @@ services:
             dockerfile: php.dockerfile
         volumes:
             - ./:/var/www/html
-        container_name: php
+        container_name: slphp
         ports:
             - 8000:8000
         networks:
-            - app-network
+            - sl-app-network
 
     mysql:
         image: mysql:5.7
         restart: always
-        container_name: mysql
+        container_name: slmysql
         ports:
             - 3306:3306
         environment:
@@ -40,7 +40,7 @@ services:
         volumes:
             - ./dockerDBData:/var/lib/mysql
         networks:
-            app-network:
+            sl-app-network:
                 ipv4_address: 10.0.0.8
     
     # redis:
@@ -53,7 +53,7 @@ services:
     #             ipv4_address: 10.0.0.9
 
 networks:
-    app-network:
+    sl-app-network:
         driver: bridge
         ipam:
             driver: default

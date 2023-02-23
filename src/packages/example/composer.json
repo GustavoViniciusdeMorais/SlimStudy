@@ -1,0 +1,14 @@
+{
+    "name": "gustavovinicius/example",
+    "description": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Gustavovinicius\\Example\\": "src/"
+        }
+    },
+    "authors": [{
+        "name": "Gustavo"
+    }],
+    "require": {}
+}
