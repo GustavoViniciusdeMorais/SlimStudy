@@ -1,7 +1,7 @@
 # Package Example
 
 ### Add the src of the package in the composer of the main project
-```
+```json
 {
     "require": {
         "slim/slim": "4.*",
@@ -16,7 +16,7 @@
 ```
 
 ### In the public index file of the slim project, call the desired class of the pakcage
-```
+```php
 <?php
 
 use Psr\Http\Message\ResponseInterface as Response;
@@ -39,7 +39,7 @@ $app->run();
 ```
 
 ### Package Class
-```
+```php
 <?php
 
 namespace Gustavovinicius\Example;
@@ -54,7 +54,7 @@ class ExampleFacade
 ```
 
 ### Package composer
-```
+```json
 {
     "name": "gustavovinicius/example",
     "description": "package",
