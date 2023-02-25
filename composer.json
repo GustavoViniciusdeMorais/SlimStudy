@@ -3,7 +3,10 @@
         "slim/slim": "4.*",
         "slim/psr7": "^1.6",
         "illuminate/database": "^10.1",
-        "symfony/console": "^6.2"
+        "symfony/console": "^6.2",
+        "doctrine/orm": "^2.14",
+        "symfony/cache": "^6.2",
+        "uma/dic": "^3.0"
     },
     "autoload": {
         "psr-4": {

@@ -41,7 +41,7 @@ services:
             - ./dockerDBData:/var/lib/mysql
         networks:
             sl-app-network:
-                ipv4_address: 10.0.0.8
+                ipv4_address: 13.0.0.8
     
     # redis:
     #     image: redis
@@ -50,7 +50,7 @@ services:
     #         - 6379:6379
     #     networks:
     #         app-network:
-    #             ipv4_address: 10.0.0.9
+    #             ipv4_address: 13.0.0.9
 
 networks:
     sl-app-network:
@@ -58,4 +58,4 @@ networks:
         ipam:
             driver: default
             config:
-                - subnet: "10.0.0.0/16"
+                - subnet: "13.0.0.0/16"
